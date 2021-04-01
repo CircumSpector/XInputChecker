@@ -13,6 +13,9 @@
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>0.1.0</Version>
+    <AssemblyVersion>0.1.0</AssemblyVersion>
+    <FileVersion>0.1.0</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
