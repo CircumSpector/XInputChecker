@@ -17,7 +17,7 @@ namespace XInputChecker
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            //RenderOptions.ProcessRenderMode = RenderMode.SoftwareOnly;
+            RenderOptions.ProcessRenderMode = RenderMode.SoftwareOnly;
         }
     }
 }
