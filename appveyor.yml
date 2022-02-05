@@ -23,7 +23,7 @@ skip_commits:
 build:
   project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
 artifacts:
-- path: 'bin**\*.exe'
+- path: 'bin**\*.*'
 test: off
 deploy:
 - provider: Environment

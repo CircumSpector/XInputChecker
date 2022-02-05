@@ -9,6 +9,8 @@
     <RootNamespace>XInputChecker</RootNamespace>
     <StartupObject>XInputChecker.App</StartupObject>
     <ServerGarbageCollection>true</ServerGarbageCollection>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
