@@ -2,6 +2,9 @@ version: 1.0.{build}
 image: Visual Studio 2019
 configuration:
 - Release
+platform:
+- x86
+- x64
 install:
 - cmd: git submodule -q update --init
 dotnet_csproj:
@@ -17,10 +20,12 @@ before_build:
 skip_commits:
   files:
     - '**/*.md'
-build:
-  project: $(APPVEYOR_BUILD_FOLDER)\$(APPVEYOR_PROJECT_NAME).sln
+build_script:
+- cmd: dotnet publish -c %CONFIGURATION% -r win-%PLATFORM% --no-self-contained -o "%APPVEYOR_BUILD_FOLDER%\artifacts\%PLATFORM%"
+after_build:
+- cmd: 7z a %APPVEYOR_PROJECT_NAME%_%PLATFORM%-v%APPVEYOR_BUILD_VERSION%.zip "%APPVEYOR_BUILD_FOLDER%\artifacts\%PLATFORM%\*"
 artifacts:
-- path: 'bin**\*.exe'
+  - path: $(APPVEYOR_PROJECT_NAME)_$(PLATFORM)-*.zip
 test: off
 deploy:
 - provider: Environment

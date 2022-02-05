@@ -9,6 +9,8 @@
     <RootNamespace>XInputChecker</RootNamespace>
     <StartupObject>XInputChecker.App</StartupObject>
     <ServerGarbageCollection>true</ServerGarbageCollection>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
     <EnableNETAnalyzers>false</EnableNETAnalyzers>
@@ -18,7 +20,7 @@
     <FileVersion>0.1.3</FileVersion>
     <ApplicationIcon>dpad.ico</ApplicationIcon>
     <Authors>Ryochan7</Authors>
-    <OutputPath>$(SolutionDir)bin\$(Configuration)\</OutputPath>
+    <OutputPath>$(SolutionDir)bin\$(Platform)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
