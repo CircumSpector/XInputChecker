@@ -2,6 +2,9 @@ version: 1.0.{build}
 image: Visual Studio 2019
 configuration:
 - Release
+platform:
+- x86
+- x64
 install:
 - cmd: git submodule -q update --init
 dotnet_csproj:
