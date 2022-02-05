@@ -20,7 +20,7 @@
     <FileVersion>0.1.3</FileVersion>
     <ApplicationIcon>dpad.ico</ApplicationIcon>
     <Authors>Ryochan7</Authors>
-    <OutputPath>$(SolutionDir)bin\$(Configuration)\</OutputPath>
+    <OutputPath>$(SolutionDir)bin\$(Platform)\</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
