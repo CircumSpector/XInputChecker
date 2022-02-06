@@ -29,6 +29,11 @@ artifacts:
 test: off
 deploy:
 - provider: Environment
+  name: GITHUB
+  on:
+    branch: master
+    APPVEYOR_REPO_TAG: true
+- provider: Environment
   name: BUILDBOT
   on:
     branch: master
